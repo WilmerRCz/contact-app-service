@@ -1,6 +1,7 @@
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import mongoose from 'mongoose'
+import cors from '@koa/cors'
 import dotenv from 'dotenv'
 import router from './routes'
 import errorHandler from './middleware/errorHandler'
@@ -8,6 +9,7 @@ import errorHandler from './middleware/errorHandler'
 dotenv.config()
 const app = new Koa()
 
+app.use(cors())
 app.use(errorHandler)
 app.use(bodyParser())
 
