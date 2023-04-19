@@ -4,7 +4,7 @@ const contactBaseSchema = {
   firstName: Joi.string(),
   lastName: Joi.string(),
   birth: Joi.string(),
-  phone: Joi.number(),
+  phone: Joi.string(),
   image: Joi.string().uri(),
   email: Joi.string().email(),
   company: Joi.string(),
