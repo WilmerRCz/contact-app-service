@@ -1,17 +1,17 @@
 import Joi from 'joi'
 
 const contactBaseSchema = {
-  firstName: Joi.string(),
-  lastName: Joi.string(),
-  birth: Joi.string(),
-  phone: Joi.string(),
-  image: Joi.string().uri(),
-  email: Joi.string().email(),
-  company: Joi.string(),
-  address: Joi.string(),
-  website: Joi.string().uri(),
-  customField: Joi.string(),
-  dataCustomField: Joi.string()
+  firstName: Joi.string().allow(''),
+  lastName: Joi.string().allow(''),
+  birth: Joi.string().allow(''),
+  phone: Joi.string().allow(''),
+  image: Joi.string().allow(''),
+  email: Joi.string().allow(''),
+  company: Joi.string().allow(''),
+  address: Joi.string().allow(''),
+  website: Joi.string().uri().allow(''),
+  customField: Joi.string().allow(''),
+  dataCustomField: Joi.string().allow('')
 }
 
 export const contactCreateSchema = Joi.object({
