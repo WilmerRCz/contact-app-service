@@ -9,7 +9,10 @@ import errorHandler from './middleware/errorHandler'
 dotenv.config()
 const app = new Koa()
 
-app.use(cors())
+app.use(cors({
+  origin: 'https://contact-app.wilmerrcz.dev/'
+}))
+
 app.use(errorHandler)
 app.use(bodyParser())
 
