@@ -10,7 +10,7 @@ dotenv.config()
 const app = new Koa()
 
 app.use(cors({
-  origin: 'http://localhost:5173' || (() => 'https://contact-app.wilmerrcz.dev/')
+  origin: 'https://contact-app.wilmerrcz.dev/'
 }))
 
 app.use(errorHandler)
